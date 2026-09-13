@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import SolarScene from "./SolarScene";
-import type { Locale } from "@/lib/i18n/config";
-import type { Dictionary } from "@/lib/i18n/types";
+import type { Locale } from "@/app/demo-1/_lib/i18n/config";
+import type { Dictionary } from "@/app/demo-1/_lib/i18n/types";
 
 export default function HeroSlider({
   locale,
@@ -16,7 +16,7 @@ export default function HeroSlider({
 }) {
   const slides = dict.hero.slides;
   const [index, setIndex] = useState(0);
-  const base = `/${locale}`;
+  const base = `/demo-1/${locale}`;
 
   useEffect(() => {
     const id = setInterval(() => {

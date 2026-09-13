@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import type { NewsItem } from "@/lib/i18n/types";
-import type { Locale } from "@/lib/i18n/config";
+import type { NewsItem } from "@/app/demo-1/_lib/i18n/types";
+import type { Locale } from "@/app/demo-1/_lib/i18n/config";
 
 export default function NewsCard({
   item,
@@ -24,7 +24,7 @@ export default function NewsCard({
       transition={{ duration: 0.5, delay: index * 0.06 }}
     >
       <Link
-        href={`/${locale}/news/${item.slug}`}
+        href={`/demo-1/${locale}/news/${item.slug}`}
         className="group block border-b hairline-dark py-8 first:pt-0"
       >
         <div className="flex items-center gap-3 text-xs text-ink/45 tnum">

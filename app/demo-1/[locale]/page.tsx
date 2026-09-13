@@ -1,12 +1,12 @@
 import Link from "next/link";
-import HeroSlider from "@/components/HeroSlider";
-import StatStrip from "@/components/StatStrip";
-import ExchangeWidget from "@/components/ExchangeWidget";
-import SectionHeading from "@/components/SectionHeading";
-import NewsCard from "@/components/NewsCard";
-import Reveal from "@/components/Reveal";
-import { isLocale, type Locale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
+import HeroSlider from "@/app/demo-1/_components/HeroSlider";
+import StatStrip from "@/app/demo-1/_components/StatStrip";
+import ExchangeWidget from "@/app/demo-1/_components/ExchangeWidget";
+import SectionHeading from "@/app/demo-1/_components/SectionHeading";
+import NewsCard from "@/app/demo-1/_components/NewsCard";
+import Reveal from "@/app/demo-1/_components/Reveal";
+import { isLocale, type Locale } from "@/app/demo-1/_lib/i18n/config";
+import { getDictionary } from "@/app/demo-1/_lib/i18n/get-dictionary";
 
 export default async function Home({
   params,
@@ -16,7 +16,7 @@ export default async function Home({
   const { locale: raw } = await params;
   const locale: Locale = isLocale(raw) ? raw : "fa";
   const dict = getDictionary(locale);
-  const base = `/${locale}`;
+  const base = `/demo-1/${locale}`;
 
   return (
     <>

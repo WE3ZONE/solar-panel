@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Reveal from "@/components/Reveal";
-import { locales, isLocale, type Locale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
+import Reveal from "@/app/demo-1/_components/Reveal";
+import { locales, isLocale, type Locale } from "@/app/demo-1/_lib/i18n/config";
+import { getDictionary } from "@/app/demo-1/_lib/i18n/get-dictionary";
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -26,7 +26,7 @@ export default async function NewsDetailPage({
       <div className="container-x max-w-3xl">
         <Reveal>
           <Link
-            href={`/${locale}/news`}
+            href={`/demo-1/${locale}/news`}
             className="text-sm font-bold text-ink/50 hover:text-ink"
           >
             {dict.newsDetail.back}

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
-import type { Dictionary } from "@/lib/i18n/types";
+import type { Dictionary } from "@/app/demo-1/_lib/i18n/types";
 
 const points = [40, 44, 42, 48, 52, 50, 58, 55, 62, 68, 64, 72];
 

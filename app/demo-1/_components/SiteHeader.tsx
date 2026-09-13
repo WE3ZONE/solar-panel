@@ -5,8 +5,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Logo from "./Logo";
 import LanguageSwitch from "./LanguageSwitch";
-import type { Locale } from "@/lib/i18n/config";
-import type { Dictionary } from "@/lib/i18n/types";
+import type { Locale } from "@/app/demo-1/_lib/i18n/config";
+import type { Dictionary } from "@/app/demo-1/_lib/i18n/types";
 
 export default function SiteHeader({
   locale,
@@ -16,7 +16,7 @@ export default function SiteHeader({
   dict: Dictionary;
 }) {
   const [open, setOpen] = useState(false);
-  const base = `/${locale}`;
+  const base = `/demo-1/${locale}`;
 
   const links = [
     { href: base, label: dict.nav.home },

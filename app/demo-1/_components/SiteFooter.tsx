@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import type { Locale } from "@/lib/i18n/config";
-import type { Dictionary } from "@/lib/i18n/types";
+import type { Locale } from "@/app/demo-1/_lib/i18n/config";
+import type { Dictionary } from "@/app/demo-1/_lib/i18n/types";
 
 export default function SiteFooter({
   locale,
@@ -10,7 +10,7 @@ export default function SiteFooter({
   locale: Locale;
   dict: Dictionary;
 }) {
-  const base = `/${locale}`;
+  const base = `/demo-1/${locale}`;
 
   return (
     <footer className="relative overflow-hidden bg-ink text-paper grain">

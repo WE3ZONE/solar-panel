@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { locales, localeLabel, localeShortLabel, type Locale } from "@/lib/i18n/config";
+import { locales, localeLabel, localeShortLabel, type Locale } from "@/app/demo-1/_lib/i18n/config";
 
 function pathWithoutLocale(pathname: string, locale: Locale) {
-  const rest = pathname.replace(new RegExp(`^/${locale}`), "");
+  const rest = pathname.replace(new RegExp(`^/demo-1/${locale}`), "");
   return rest === "" ? "/" : rest;
 }
 
@@ -62,7 +62,7 @@ export default function LanguageSwitch({
             {locales.map((l) => (
               <li key={l}>
                 <Link
-                  href={`/${l}${rest}`}
+                  href={`/demo-1/${l}${rest}`}
                   onClick={() => setOpen(false)}
                   className={`flex items-center justify-between px-4 py-2.5 text-sm font-semibold transition-colors ${
                     l === locale

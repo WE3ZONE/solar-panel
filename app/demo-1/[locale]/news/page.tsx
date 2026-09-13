@@ -1,7 +1,7 @@
-import NewsCard from "@/components/NewsCard";
-import Reveal from "@/components/Reveal";
-import { isLocale, type Locale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
+import NewsCard from "@/app/demo-1/_components/NewsCard";
+import Reveal from "@/app/demo-1/_components/Reveal";
+import { isLocale, type Locale } from "@/app/demo-1/_lib/i18n/config";
+import { getDictionary } from "@/app/demo-1/_lib/i18n/get-dictionary";
 
 export default async function NewsPage({
   params,

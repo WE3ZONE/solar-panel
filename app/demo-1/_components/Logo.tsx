@@ -1,4 +1,4 @@
-import type { Locale } from "@/lib/i18n/config";
+import type { Locale } from "@/app/demo-1/_lib/i18n/config";
 
 const brandNames: Record<Locale, string> = {
   fa: "تابش انرژی",

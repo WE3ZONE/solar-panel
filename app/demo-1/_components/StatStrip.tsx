@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { Dictionary } from "@/lib/i18n/types";
+import type { Dictionary } from "@/app/demo-1/_lib/i18n/types";
 
 export default function StatStrip({ dict }: { dict: Dictionary }) {
   return (

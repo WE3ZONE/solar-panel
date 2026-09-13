@@ -1,10 +1,11 @@
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Vazirmatn, Space_Grotesk, Inter } from "next/font/google";
 import "../globals.css";
-import { locales, localeDir, isLocale, type Locale } from "@/lib/i18n/config";
-import { getDictionary } from "@/lib/i18n/get-dictionary";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import { locales, localeDir, isLocale, type Locale } from "@/app/demo-1/_lib/i18n/config";
+import { getDictionary } from "@/app/demo-1/_lib/i18n/get-dictionary";
+import SiteHeader from "@/app/demo-1/_components/SiteHeader";
+import SiteFooter from "@/app/demo-1/_components/SiteFooter";
 
 const vazirmatn = Vazirmatn({
   subsets: ["arabic"],
@@ -34,7 +35,8 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "fa";
+  if (!isLocale(raw)) notFound();
+  const locale: Locale = raw;
   const dict = getDictionary(locale);
   return { title: dict.meta.title, description: dict.meta.description };
 }
@@ -47,7 +49,8 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: raw } = await params;
-  const locale: Locale = isLocale(raw) ? raw : "fa";
+  if (!isLocale(raw)) notFound();
+  const locale: Locale = raw;
   const dict = getDictionary(locale);
   const dir = localeDir[locale];
 

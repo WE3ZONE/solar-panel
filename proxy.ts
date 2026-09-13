@@ -1,20 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import { defaultLocale, isLocale, locales } from "@/lib/i18n/config";
+import { defaultLocale, locales } from "@/app/demo-1/_lib/i18n/config";
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-
-  const hasLocale = locales.some(
-    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
-  );
-  if (hasLocale) return;
-
-  const first = pathname.split("/")[1];
-  if (first && isLocale(first)) return;
-
   const url = request.nextUrl.clone();
-  url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.redirect(url);
+  if (pathname === "/demo-1") {
+    url.pathname = `/demo-1/${defaultLocale}`;
+    return NextResponse.redirect(url);
+  }
+  if (locales.some((locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`))) {
+    url.pathname = `/demo-1${pathname}`;
+    return NextResponse.redirect(url);
+  }
 }
 
 export const config = {
