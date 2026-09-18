@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./style.css";
+import DemoChooserBar from "@/app/_components/DemoChooserBar";
 const font = Vazirmatn({ subsets: ["arabic"], weight: ["400", "500", "600", "700", "800"], variable: "--font-demo" });
 export const metadata: Metadata = { title: "تابش سولار | راهکارهای هوشمند انرژی", description: "دموی سوم تابش انرژی گستر؛ انرژی پاک برای فردایی روشن‌تر" };
 export default function Layout({children}: {children: React.ReactNode}) {
-  return <html lang="fa" dir="rtl"><body className={font.variable}>{children}</body></html>;
+  return <html lang="fa" dir="rtl"><body className={font.variable}><DemoChooserBar />{children}</body></html>;
 }

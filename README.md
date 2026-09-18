@@ -6,6 +6,7 @@ One Next.js app and one Vercel deployment, with `main` as the production branch.
 - `/demo-1`: existing multilingual website (defaults to `/demo-1/fa`)
 - `/demo-2`: Persian, photo-led solar landing page inspired by the supplied reference
 - `/demo-3`: blue and orange solar packages and products landing page
+- `/demo-4`: green and cream SolarNova-inspired design, with sticky navigation and interactive product rows
 
 Demo 1 pages, components, data and styles live in `app/demo-1/`. Demo 2 lives in `app/demo-2/` with its own root layout and stylesheet; its images live in `public/demo-2/`. Demo 3 lives in `app/demo-3/` with its own layout and styles; it reuses the illustrative solar photos from `public/demo-2/`. The hub has its own root layout, isolated from Demo 1. Shared static assets remain in `public/`. Existing locale URLs redirect to Demo 1.
 

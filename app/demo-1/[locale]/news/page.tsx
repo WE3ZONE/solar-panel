@@ -11,6 +11,7 @@ export default async function NewsPage({
   const { locale: raw } = await params;
   const locale: Locale = isLocale(raw) ? raw : "fa";
   const dict = getDictionary(locale);
+  const [featured, ...rest] = dict.news;
 
   return (
     <section className="section-y">
@@ -25,14 +26,27 @@ export default async function NewsPage({
           </p>
         </Reveal>
 
-        <div className="mt-14 max-w-3xl">
-          {dict.news.map((item, i) => (
+        {featured && (
+          <div className="mt-14">
+            <NewsCard
+              item={featured}
+              locale={locale}
+              readMore={dict.newsCard.readMore}
+              index={0}
+              variant="featured"
+            />
+          </div>
+        )}
+
+        <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {rest.map((item, i) => (
             <NewsCard
               key={item.slug}
               item={item}
               locale={locale}
               readMore={dict.newsCard.readMore}
-              index={i}
+              index={i + 1}
+              variant="card"
             />
           ))}
         </div>

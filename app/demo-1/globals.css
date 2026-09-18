@@ -174,3 +174,5 @@ input::placeholder,
 textarea::placeholder {
   color: rgba(7, 9, 15, 0.35);
 }
+
+.demo-chooser-bar{height:44px;background:#101410;color:#f4f7ed;position:relative;z-index:60;display:flex;align-items:center}.demo-chooser-bar__inner{width:min(100% - 48px,1280px);margin-inline:auto;display:flex;align-items:center}.demo-chooser-bar__link{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(202,221,169,.28);border-radius:999px;background:rgba(207,229,163,.09);padding:7px 13px;color:#eaf4d8;font-size:11px;font-weight:700;line-height:1;transition:background .2s,transform .2s}.demo-chooser-bar__link:hover{background:rgba(207,229,163,.18);transform:translateY(-1px)}.demo-chooser-bar__link span{font-family:Arial,sans-serif;font-size:13px}@media(max-width:640px){.demo-chooser-bar__inner{width:calc(100% - 32px)}}

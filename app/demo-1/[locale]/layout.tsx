@@ -6,6 +6,7 @@ import { locales, localeDir, isLocale, type Locale } from "@/app/demo-1/_lib/i18
 import { getDictionary } from "@/app/demo-1/_lib/i18n/get-dictionary";
 import SiteHeader from "@/app/demo-1/_components/SiteHeader";
 import SiteFooter from "@/app/demo-1/_components/SiteFooter";
+import DemoChooserBar from "@/app/_components/DemoChooserBar";
 
 const vazirmatn = Vazirmatn({
   subsets: ["arabic"],
@@ -59,6 +60,7 @@ export default async function LocaleLayout({
       <body
         className={`${vazirmatn.variable} ${spaceGrotesk.variable} ${inter.variable} antialiased`}
       >
+        <DemoChooserBar />
         <SiteHeader locale={locale} dict={dict} />
         <main>{children}</main>
         <SiteFooter locale={locale} dict={dict} />
