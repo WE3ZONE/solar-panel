@@ -11,12 +11,13 @@ export default function Home() {
       <section className="picker-content">
         <span className="picker-kicker">TABESH ENERGY · COLLECTION</span>
         <h1>نمونه وب‌سایت‌ها</h1>
-        <p>چهار مسیر طراحی برای معرفی راهکارهای انرژی خورشیدی.</p>
+        <p>پنج مسیر طراحی برای معرفی راهکارهای انرژی خورشیدی.</p>
         <nav aria-label="انتخاب نمونه وب‌سایت">
           <Link href="/demo-1"><small>۰۱</small>دمو ۱ <b>↗</b></Link>
           <Link href="/demo-2"><small>۰۲</small>دمو ۲ <b>↗</b></Link>
           <Link href="/demo-3"><small>۰۳</small>دمو ۳ <b>↗</b></Link>
           <Link href="/demo-4"><small>۰۴</small>دمو ۴ <b>↗</b></Link>
+          <Link href="/demo-5"><small>۰۵</small>دمو ۵ <b>↗</b></Link>
         </nav>
       </section>
     </main>
